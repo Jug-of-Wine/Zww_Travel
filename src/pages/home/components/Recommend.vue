@@ -2,7 +2,7 @@
 	<div>
 		<div class="recommend-title">热销</div>
 		<ul>
-			<li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+			<li class="item border-bottom" v-for="item of list" :key="item.id">
 				<img class="item-img" :src='item.imgUrl' />
 				<div class="item-info">
 					<p class="item-title">{{item.title}}</p>
@@ -17,40 +17,8 @@
 <script>
 export default{
 	name: 'HomeRecommend',
-	data () {
-		return {
-			recommendList: [{
-				id: '0001',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/38/384c12c8a31259f7a3.img.jpg_200x200_7674a1c6.jpg',
-				title: '长沙乐水魔方水世界',
-				desc: '长沙乐水魔方水世界长沙乐水魔方水世界'
-			},{
-				id: '0002',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/38/384c12c8a31259f7a3.img.jpg_200x200_7674a1c6.jpg',
-				title: '长沙乐水魔方水世界',
-				desc: '长沙乐水魔方水世界长沙乐水魔方水世界'
-			},{
-				id: '0003',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/38/384c12c8a31259f7a3.img.jpg_200x200_7674a1c6.jpg',
-				title: '长沙乐水魔方水世界',
-				desc: '长沙乐水魔方水世界长沙乐水魔方水世界'
-			},{
-				id: '0004',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/38/384c12c8a31259f7a3.img.jpg_200x200_7674a1c6.jpg',
-				title: '长沙乐水魔方水世界',
-				desc: '长沙乐水魔方水世界长沙乐水魔方水世界'
-			},{
-				id: '0005',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/38/384c12c8a31259f7a3.img.jpg_200x200_7674a1c6.jpg',
-				title: '长沙乐水魔方水世界',
-				desc: '长沙乐水魔方水世界长沙乐水魔方水世界'
-			},{
-				id: '0006',
-				imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/38/384c12c8a31259f7a3.img.jpg_200x200_7674a1c6.jpg',
-				title: '长沙乐水魔方水世界',
-				desc: '长沙乐水魔方水世界长沙乐水魔方水世界'
-			}]
-		}
+	props:{
+		list: Array
 	}
 }
 
